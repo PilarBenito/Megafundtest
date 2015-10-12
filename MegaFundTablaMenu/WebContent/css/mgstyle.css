@@ -1,0 +1,60 @@
+@CHARSET "ISO-8859-1";
+p {
+    font-family: sans-serif, lucida;
+}
+p.normal {
+    font-style: normal;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+h1 {
+    color:blue;
+    font-family:verdana;
+    font-size:200%;
+    background-color: #6495ed;
+}
+p  {
+    color:black;
+    font-family:sans-serif;
+    font-size:100%;
+    background-color: #A4A4A4;
+}
+
+.tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:10px;
+	color:#fff;
+	font-size:12px Arial;
+}
+
+td.rentabilidad-negativa {
+    font-weight: bold;
+    color: red;
+}
+
+td.rentabilidad-positiva {
+    font-weight: bold;
+    color: green;
+}
+    
+td.vender {
+	font-weight: bold;
+	color: white;
+	background-color: red;}
+    
+td.comprar {
+	font-weight: bold;
+    background-color: yellow;
+}
+
+

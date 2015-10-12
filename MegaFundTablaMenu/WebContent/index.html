@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		
+		<!-- Megafund stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/mgstyle.css">
+		<!-- Stylesheet from table library -->
+		<link href="../../lib/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    	<link href="../../lib/DataTables-1.10.9/css/dataTables.jqueryui.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Javascript files -->
+	    <script src="../../lib/jquery/js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script src="../../lib/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+			
+		<!-- js for tooltip -->
+		<script type="text/javascript" src="js/tooltip.js"></script>
+		<!-- js for table library -->
+		<script src="../../lib/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+		<script src="../../lib/DataTables-1.10.9/js/jquery.dataTables.js"></script>
+		<script src="../../lib/DataTables-1.10.9/js/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+		<script src="../../lib/jquery-ui/js/jquery.ui-contextmenu.min.js"></script>
+		
+		<!-- MF scripts and stylesheets for Tables -->
+		<script src="js/componentes-datatable.js"></script>
+		<link href="css/fund-datatable.css" rel="stylesheet" type="text/css" />
+		
+		<script src="js/rent-datatable.js"></script>
+	    <script src="js/statis-datatable.js"></script>
+	    
+	    <!-- MF scripts for Botones -->
+	    <script src="js/cartera-detalle-opciones.js"></script>
+	
+		<title>Megafund Tests</title>
+
+
+</head>
+<body>
+
+    
+	<header>
+		<div class="container">
+			<div class="main row">
+				<!-- Menú -->
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed"
+								data-toggle="collapse"
+								data-target="#bs-example-navbar-collapse-1"
+								aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">
+								<img alt="Añadir a Pantalla de Inicio" src="images/house_small.jpg" class="masterTooltip" title="Pantalla de Inicio">
+      						</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse"
+							id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">Ranking <span class="sr-only">(current)</span></a></li>
+								<li><a href="#" class="masterTooltip" title="Configuración de parámetros">Configuración</a></li>
+								<li class="dropdown"><a href="#" class="dropdown-toggle"
+									data-toggle="dropdown" role="button" aria-haspopup="true"
+									aria-expanded="false" class="masterTooltip" 
+									title="Monitor de acciones, carteras, fondos de inversión, ETF y planes de pensiones">Monitor<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Renta 4</a></li>
+										<li><a href="#">SelfBank</a></li>
+										<li><a href="#">Tressis</a></li>
+										<li><a href="#">Inversis</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">ETF</a></li>
+										<li><a href="#">Indices</a></li>
+									</ul>
+								</li>
+							</ul>
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Buscar por nombre o ISIN">
+								</div>
+								<button type="submit" class="btn btn-default">Submit</button>
+							</form>
+							<button type="button" class="btn btn-default navbar-btn">Ayuda</button>
+							
+						</div>
+						<!-- /.navbar-collapse -->
+					</div>
+					<!-- /.container-fluid -->
+				</nav>
+				<!-- 
+				<div class="container col-md-3">Menu</div>
+				<div class="col-md-3">Buscador</div>
+				<div class="col-md-3">Botones</div>
+				<div class="col-md-3">Fecha e Informacion</div> -->
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="main row">
+			<article class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <!-- Derecha -->
+				<div class="panel panel-default"> <!-- Grafica de valores -->
+					<div class="panel-heading">Gráfica de valores</div>
+					<div class="panel-body">
+						<table class="table table-condensed">
+							<TR><TH>Males<TD>1.9<TD>0.003<TD>40%
+							<TR><TH>Females<TD>1.7<TD>0.002<TD>43%
+						</table>
+						</div>
+				</div>
+				<div class="panel panel-default"> <!-- Rentabilidades anuales -->
+					<div class="panel-heading">Rentabilidades anuales</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table id="rentabilidades" class="table table-condensed"></table>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default"> <!-- Tabla de Estadísticas -->
+					<div class="panel-heading">Tabla de Estadísticas</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table id="estadisticas" class="table table-condensed"></table>
+						</div>
+					</div>
+				</div>
+			</article> 
+			<aside class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <!-- Izquierda -->
+				<div class="panel panel-default">
+					<div class="panel-body">
+						
+						<div class="row">
+							<div id="radio">
+    							<input type="radio" id="trading" name="trading"><label for="trading">Trading</label>
+    							<input type="radio" id="historico" name="historico"><label for="historico">Históricos</label>
+    							<input type="radio" id="componentes" name="componentes" checked="checked"><label for="componentes">Componentes</label>
+    							<input type="radio" id="evolucion" name="evolucion"><label for="evolucion">Evolución</label>
+	   							<input type="radio" id="estadistica" name="estadistica"><label for="estadistica">Estadística</label>
+  							</div>
+						</div>
+						<div class="table-responsive">
+						<table id="componentes-cartera" class="table table-condensed table-bordered table-hover"></table>
+						</div>
+					</div>
+				</div>
+			</aside>
+  		</div>
+	</div>
+	
+</body>
+</html>
